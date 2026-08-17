@@ -2,6 +2,7 @@
 
 A Retrieval-Augmented Generation (RAG) medical chatbot that answers health questions using trusted medical reference books as its knowledge base — it only answers from those sources and says so when it doesn't know something.
 
+## Live Link - https://medibot-saloni.streamlit.app/
 ## How it works
 
 1. **Indexing (offline, one-time):** Medical PDFs in `data/` are loaded, split into chunks, embedded, and stored in a local FAISS vector index.
