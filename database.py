@@ -35,14 +35,33 @@ ALTER TABLE chat_history ADD COLUMN IF NOT EXISTS session_id TEXT;
 
 
 @contextlib.contextmanager
+
+# def get_cursor():
+#     conn = psycopg2.connect(os.environ["DATABASE_URL"])
+
+def get_database_url():
+    if os.getenv("DATABASE_URL"):
+        return os.getenv("DATABASE_URL")
+
+    import streamlit as st
+    return st.secrets["DATABASE_URL"]
+
+@contextlib.contextmanager
 def get_cursor():
-    conn = psycopg2.connect(os.environ["DATABASE_URL"])
+    conn = psycopg2.connect(get_database_url())
     try:
         with conn:
             with conn.cursor() as cur:
                 yield cur
     finally:
         conn.close()
+
+#     try:
+#         with conn:
+#             with conn.cursor() as cur:
+#                 yield cur
+#     finally:
+#         conn.close()
 
 
 def init_db():
