@@ -2,6 +2,9 @@
 
 A Retrieval-Augmented Generation (RAG) medical chatbot that answers health questions using trusted medical reference books as its knowledge base — it only answers from those sources and says so when it doesn't know something.
 
+
+<img width="1910" height="917" alt="Screenshot 2026-08-11 115915" src="https://github.com/user-attachments/assets/d2962dc4-cab4-4faf-9a98-21fe08f73949" />
+
 ## Live Link - https://medibot-saloni.streamlit.app/
 ## How it works
 
