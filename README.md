@@ -93,10 +93,10 @@ streamlit run medibot.py
 
 Drop any additional text-based PDF into `data/`, then re-run `create_memory_for_llm.py` to rebuild the vector index. The app will pick up the expanded knowledge base on next restart.
 
-## Deployment
+## Deployment -
 
 Deployed on [Streamlit Community Cloud](https://share.streamlit.io) — set `HF_TOKEN` and `DATABASE_URL` under the app's **Secrets** in the same TOML format as `.env`.
 
-## Disclaimer
+## Disclaimer -
 
 Medibot is an informational tool, not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
